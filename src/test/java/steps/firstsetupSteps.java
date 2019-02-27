@@ -8,6 +8,7 @@ import cucumber.api.java.en.When;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -18,12 +19,14 @@ public class firstsetupSteps {
     private RegisterActivity activity = null;
     @Given("^I launch the GnuCash App for the first time$")
     public void iLaunchTheGnuCashAppForTheFirstTime() {
+        String apkpath="src\\test\\resources\\GnucashAndroid_v2.4.0.apk";
+        File app=new File(apkpath);
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //capabilities.setCapability("appium-version", "1.0");
         capabilities.setCapability("platformName", "Android");
         //capabilities.setCapability("platformVersion", "5.1");
         capabilities.setCapability("deviceName", "Nexus 5X 25");
-        capabilities.setCapability("app", "C:\\Users\\Lino\\Downloads\\GnucashAndroid_v2.4.0.apk");
+        capabilities.setCapability("app",app.getAbsolutePath() );
         capabilities.setCapability("appWaitActivity", "org.gnucash.android.ui.wizard.FirstRunWizardActivity");
         capabilities.setCapability("automationName","uiautomator2");
 
