@@ -5,13 +5,13 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
+
+import static org.junit.Assert.assertEquals;
 
 public class firstsetupSteps {
     private AndroidDriver wd = null;
@@ -48,7 +48,7 @@ public class firstsetupSteps {
 
     @And("^I select eur as currency$")
     public void iSelectEurAsCurrency() {
-        activity.selectCurrency();
+        activity.selectCurrencyEUR();
     }
 
     @And("^I select default accounts$")
@@ -73,6 +73,32 @@ public class firstsetupSteps {
     @And("^I end up in the accounts page$")
     public void iEndUpInTheAccountsPage() {
         activity.dismissClick();
+    }
+
+    @And("^I select other as currency$")
+    public void iSelectOtherAsCurrency() {
+        activity.selectCurrencyOther();
+    }
+
+    @And("^I select BEF$")
+    public void iSelectCurrency() {
+        activity.selectCurrencyBEF();
+    }
+
+    @And("^I enable the crash reports sending$")
+    public void iEnableTheCrashReportsSending() {
+        activity.selectSendReports();
+    }
+
+    @And("^I select no accounts$")
+    public void iSelectNoAccounts() {
+        activity.selectNoAccount();
+    }
+
+    @And("^I end up in the empty account page$")
+    public void iEndUpInTheEmptyAccountPage() {
+        activity.dismissClick();
+        assertEquals(activity.checkEmptyAccount(),true);
     }
 }
 
