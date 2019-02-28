@@ -1,0 +1,16 @@
+Task 2: GnuCash – Test Plan
+Features summary
+•	Setup Wizard
+•	Book
+•	Accounts
+•	Subaccounts
+•	Transactions
+•	Reports
+•	Export
+Setup Wizard
+•	Setup the GnuCash App with new default accounts with euro currency and not send crash reports: normal Happy flow – most possible common case - smoke (implemented)
+•	Setup the GnuCash App with no account with other currency and sending crash reports (implemented)
+•	Review Screen link check: should be redirected to the respective ‘page’ for each element in the review - medium
+•	Return Button check: check that the chosen options are still selected when we push the return button - medium
+•	Import Account – check that the import is working properly – high
+
