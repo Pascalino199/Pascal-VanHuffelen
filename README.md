@@ -6,7 +6,7 @@ I'm working with IntelliJ IDEA on Windows 10. I chose to work with Cucumber/Gher
 To automate the android part, I chose Appium. Since I'm used to work with GEB (high lever of Selenium)
 I decided to use PageFactory. The page system allows easier maintenance.
 During automation, specially in agile project, maintenance gets heavy. So a solution as Page object is very welcome from my point of view.
-
+Javadoc still has to be done.
 
 Requirements:
 - Launch Appium Server : 0.0.0.0:4723 (default)
