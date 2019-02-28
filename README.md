@@ -24,3 +24,5 @@ Output
 19 Steps (19 passed)
 0m57,277s
 
+Encountered Issues:
+- Appium Inspector : freezes when I dismiss the news pop-up => use of uiautomatorviewer
